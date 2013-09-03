@@ -11,7 +11,7 @@
 __author__ = "Felix Dewaleyne"
 __credits__ = ["Felix Dewaleyne"]
 __license__ = "GPL"
-__version__ = "0.3"
+__version__ = "0.4"
 __maintainer__ = "Felix Dewaleyne"
 __email__ = "fdewaley@redhat.com"
 __status__ = "prod"
@@ -47,7 +47,7 @@ import csv
 csvfile = open('systems_'+login+'.csv', 'wb' )
 csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_NONNUMERIC)
 csv_writer.writerow(headers)
-for system in rhn_data:
+for system in rhn_data.itervalues():
     line = []
     for value in headers:
         line.append(system.get(value))
