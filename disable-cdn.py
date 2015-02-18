@@ -18,7 +18,7 @@ __status__ = "prod"
 
 import xmlrpclib, sys, getpass
 #connection part
-client = xmlrpclib.Server("https://rhn.redhat.com/rpc/api")
+client = xmlrpclib.Server("https://xmlrpc.rhn.redhat.com/rpc/api")
 sys.stderr.write("enter your RHN login: ")
 login = raw_input().strip()
 password = getpass.getpass(prompt="enter your RHN Password: ")
