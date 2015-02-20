@@ -7,3 +7,4 @@ a serie of small scripts designed to use the RHN api to fetch or update info
 
  - **rhn-export-to-csv.py** : a script that will dump most of the information available for your systems into a csv file
  - **disable-cdn.py** : a script that lists all systems and disables location aware updates when it is enabled
+ - **rhn_entitle_all.py** : a script that entitles all systems visible to the user
