@@ -17,7 +17,7 @@ __email__ = "fdewaley@redhat.com"
 __status__ = "prod"
 
 
-import xmlrpclib, sys, getpass
+import xmlrpclib, sys, getpass, os
 #connection part
 client = xmlrpclib.Server("https://xmlrpc.rhn.redhat.com/rpc/api")
 sys.stderr.write("enter your RHN login: ")
@@ -54,3 +54,5 @@ for system in rhn_data.itervalues():
     csv_writer.writerow(line)
     del line
 del rhn_data
+csvfilepath = os.getcwd()+'/'+'systems_'+login+'.csv'
+print "\n The list of systems and their details are available in the file:", csvfilepath
